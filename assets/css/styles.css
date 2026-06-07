@@ -42,6 +42,7 @@ body {
     linear-gradient(to right, rgba(32, 41, 88, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(32, 41, 88, 0.04) 1px, transparent 1px);
   background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(circle at center, #000 44%, transparent 85%);
   mask-image: radial-gradient(circle at center, #000 44%, transparent 85%);
 }
 
@@ -82,6 +83,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   background: rgba(245, 248, 255, 0.78);
   border-bottom: 1px solid var(--line);
@@ -226,10 +228,16 @@ h1 {
   margin: 0.55rem 0 1rem;
   font-size: clamp(2rem, 3.8vw, 3.6rem);
   line-height: 1.08;
-  background: linear-gradient(120deg, #13233f 40%, #4b35ff 88%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #13233f;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  h1 {
+    background: linear-gradient(120deg, #13233f 40%, #4b35ff 88%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .hero-desc {
@@ -313,11 +321,11 @@ h1 {
 
 .hero-art {
   margin-top: 0.8rem;
+  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
+  max-width: 100%;
+  aspect-ratio: auto;
   border-radius: 14px;
   border: 1px solid rgba(32, 41, 88, 0.14);
   background: #f7f9ff;
@@ -592,6 +600,20 @@ h2 {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(245, 248, 255, 0.96);
+  }
+}
+
+@supports not ((mask-image: radial-gradient(circle at center, #000 44%, transparent 85%)) or (-webkit-mask-image: radial-gradient(circle at center, #000 44%, transparent 85%))) {
+  .tech-grid {
+    -webkit-mask-image: none;
+    mask-image: none;
+    opacity: 0.25;
+  }
 }
 
 @media (max-width: 1024px) {
