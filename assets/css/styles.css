@@ -122,24 +122,43 @@ a {
 }
 
 .lang-switch {
-  display: inline-flex;
-  border: 1px solid var(--line);
+  margin: 0;
+  padding: 0.22rem;
+  min-inline-size: 148px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.22rem;
+  border: 1px solid rgba(19, 35, 63, 0.14);
   border-radius: 999px;
-  overflow: hidden;
+  background: #eef3fb;
 }
 
 .lang-btn {
   border: 0;
+  border-radius: 999px;
   background: transparent;
-  padding: 0.42rem 0.82rem;
+  min-height: 42px;
+  padding: 0.46rem 0.9rem;
   color: var(--muted);
   cursor: pointer;
   font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .lang-btn.active {
   color: #fff;
-  background: linear-gradient(110deg, var(--brand), var(--brand-2));
+  background: linear-gradient(120deg, #0f3dff, #178fff);
+  box-shadow: 0 8px 16px rgba(15, 61, 255, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  background: #e2eaf8;
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid rgba(15, 61, 255, 0.45);
+  outline-offset: 1px;
 }
 
 .menu-toggle {

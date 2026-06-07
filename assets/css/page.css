@@ -1,10 +1,14 @@
 :root {
-  --bg: #f6f9ff;
+  --bg: #f4f8ff;
+  --bg-soft: #ebf2ff;
   --text: #142643;
   --muted: #4e607d;
   --line: rgba(20, 38, 67, 0.16);
   --brand: #0f3dff;
+  --brand-2: #1ea8dd;
+  --chip: #e6efff;
   --card: #ffffff;
+  --shadow: 0 14px 36px rgba(15, 61, 255, 0.12);
 }
 
 * {
@@ -15,7 +19,10 @@ body {
   margin: 0;
   font-family: "Avenir Next", "Segoe UI Variable", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 92% 6%, rgba(30, 168, 221, 0.2), transparent 24%),
+    radial-gradient(circle at 4% 92%, rgba(15, 61, 255, 0.18), transparent 30%),
+    var(--bg);
   line-height: 1.7;
 }
 
@@ -25,13 +32,16 @@ body {
 }
 
 .page-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   border-bottom: 1px solid var(--line);
-  background: #ffffffd6;
-  backdrop-filter: blur(8px);
+  background: #ffffffcf;
+  backdrop-filter: blur(10px);
 }
 
 .page-header .container {
-  min-height: 68px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,32 +49,53 @@ body {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-weight: 700;
   color: var(--brand);
 }
 
+.brand img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
 .back-link {
   color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.back-link:hover {
+  border-color: rgba(15, 61, 255, 0.4);
 }
 
 main {
-  padding: 2rem 0 3rem;
+  padding: 2.2rem 0 3.2rem;
 }
 
 .card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 1.2rem;
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
 }
 
 h1 {
   margin: 0;
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
 }
 
 h2 {
-  margin-top: 2rem;
+  margin-top: 1.9rem;
+  margin-bottom: 0.4rem;
   font-size: 1.2rem;
 }
 
@@ -73,9 +104,144 @@ li {
   color: var(--muted);
 }
 
+a {
+  color: #0b46d3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: #0d4ceb;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0.65rem 0 0;
+  font-size: 1.05rem;
+}
+
+.meta-row {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 61, 255, 0.18);
+  background: var(--chip);
+  color: #234586;
+  padding: 0.2rem 0.62rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.section-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.section-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(160deg, #ffffff, #f6f9ff 65%);
+}
+
+.section-item h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.section-item p,
+.section-item ul {
+  margin: 0.55rem 0 0;
+}
+
+.link-grid {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.link-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+}
+
+.link-card strong {
+  display: block;
+  color: #1f3565;
+}
+
+.notice {
+  margin-top: 1rem;
+  border-left: 3px solid #f59f00;
+  padding: 0.5rem 0 0.5rem 0.85rem;
+  color: #5b5c67;
+  background: rgba(245, 159, 0, 0.08);
+  border-radius: 10px;
+}
+
+.timeline {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.timeline .item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.8rem;
+}
+
+.timeline .item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline .item p {
+  margin: 0.45rem 0 0;
+}
+
 footer {
   border-top: 1px solid var(--line);
   padding: 1rem 0 2rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .page-header .container {
+    min-height: 64px;
+  }
+
+  .back-link {
+    font-size: 0.88rem;
+    padding: 0.3rem 0.62rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equation Studio | 方程工坊</title>
-  <meta name="description" content="Equation Studio（方程工坊）是面向教育、科研与工程的公式可视化创作平台，让公式从纸面表达升级为可交互模型。" />
-  <meta name="keywords" content="Equation Studio, 方程工坊, 数学可视化, 公式编辑器, 教育科技, 科学演示" />
+  <meta name="description" content="Equation Studio（方程工坊）是一个将抽象公式转化为直观表达的创作官网，服务教育、科研与科学传播。" />
+  <meta name="keywords" content="Equation Studio, 方程工坊, 公式可视化, 教育创新, 科学传播" />
   <meta name="theme-color" content="#0f3dff" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Equation Studio | 看见公式运行的过程" />
-  <meta property="og:description" content="把抽象公式变成图形、动画和交互模型，服务学生、教师、科研人员与内容创作者。" />
+  <meta property="og:description" content="一个面向未来教育与科学传播的可视化公式创作项目。" />
   <meta property="og:image" content="assets/img/logo.png" />
   <meta property="og:url" content="https://equation-studio.github.io/EquationStudio/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Equation Studio | 方程工坊" />
-  <meta name="twitter:description" content="Figma × GeoGebra × Desmos × After Effects" />
+  <meta name="twitter:description" content="Visual Equation Creation for Education and Scientific Storytelling" />
   <link rel="canonical" href="https://equation-studio.github.io/EquationStudio/" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script type="application/ld+json">
@@ -24,12 +24,7 @@
     "name": "Equation Studio",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "iOS, iPadOS, macOS",
-    "description": "A visual equation creation platform for education, research and engineering.",
-    "offers": [
-      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "CNY"},
-      {"@type": "Offer", "name": "Plus", "price": "38", "priceCurrency": "CNY"},
-      {"@type": "Offer", "name": "Pro", "price": "128", "priceCurrency": "CNY"}
-    ]
+    "description": "A visual equation creation project for education and scientific communication."
   }
   </script>
 </head>
@@ -47,9 +42,9 @@
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
 
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a href="#features" data-i18n="navFeatures">功能</a>
-        <a href="#architecture" data-i18n="navArchitecture">架构</a>
-        <a href="#pricing" data-i18n="navPricing">定价</a>
+        <a href="#about" data-i18n="navAbout">项目介绍</a>
+        <a href="#features" data-i18n="navHighlights">亮点</a>
+        <a href="#plans" data-i18n="navPlans">计划</a>
         <a href="#roadmap" data-i18n="navRoadmap">路线图</a>
         <a href="#faq" data-i18n="navFaq">常见问题</a>
       </nav>
@@ -66,66 +61,66 @@
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="kicker" data-i18n="heroKicker">Equation Studio 1.0 · Release Candidate</p>
+          <p class="kicker" data-i18n="heroKicker">Equation Studio · Project Introduction</p>
           <h1 data-i18n="heroTitle">看见公式运行的过程</h1>
           <p class="hero-desc" data-i18n="heroDesc">
-            从纸面公式到可交互模型。面向教育、科研、工程与内容创作的一体化可视化公式创作平台。
+            Equation Studio 是一个面向教育、科研与内容创作的可视化公式项目，让抽象数学表达变得直观、可讲述、可分享。
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing" data-i18n="heroPrimary">查看版本与价格</a>
-            <a class="btn btn-ghost" href="#mvp" data-i18n="heroSecondary">浏览 V1 MVP</a>
+            <a class="btn btn-primary" href="#about" data-i18n="heroPrimary">了解项目愿景</a>
+            <a class="btn btn-ghost" href="#plans" data-i18n="heroSecondary">查看合作计划</a>
           </div>
           <div class="hero-metrics">
             <article>
-              <strong>100K+</strong>
-              <span data-i18n="metricUsers">首年目标注册用户</span>
+              <strong data-i18n="metric1Value">Education</strong>
+              <span data-i18n="metric1Label">面向学习与教学场景</span>
             </article>
             <article>
-              <strong>5%</strong>
-              <span data-i18n="metricPaid">目标付费率</span>
+              <strong data-i18n="metric2Value">Research</strong>
+              <span data-i18n="metric2Label">支持模型表达与传播</span>
             </article>
             <article>
-              <strong>&lt;0.1%</strong>
-              <span data-i18n="metricCrash">崩溃率目标</span>
+              <strong data-i18n="metric3Value">Creator</strong>
+              <span data-i18n="metric3Label">服务知识创作者叙事</span>
             </article>
           </div>
         </div>
 
         <aside class="hero-panel reveal">
-          <h2 data-i18n="panelTitle">产品定义</h2>
-          <p class="panel-eq">Figma × GeoGebra × Desmos × After Effects</p>
+          <h2 data-i18n="panelTitle">项目定位</h2>
+          <p class="panel-eq" data-i18n="panelEq">Equation Studio = Visual Math Storytelling Studio</p>
           <ul>
-            <li data-i18n="panelItem1">公式编辑 + 节点编排 + 动画时间轴</li>
-            <li data-i18n="panelItem2">2D/3D 实时渲染与数据驱动演示</li>
-            <li data-i18n="panelItem3">教学、科研、工程内容导出与分享</li>
+            <li data-i18n="panelItem1">让公式不止可读，而是可被看见</li>
+            <li data-i18n="panelItem2">让知识表达不止静态，而是可交互</li>
+            <li data-i18n="panelItem3">让复杂概念不止解释，而是可传播</li>
           </ul>
-          <a href="#features" class="panel-link" data-i18n="panelLink">查看核心能力</a>
+          <a href="#features" class="panel-link" data-i18n="panelLink">查看项目亮点</a>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="value">
+    <section class="section" id="about">
       <div class="container">
         <header class="section-head reveal">
-          <p class="kicker" data-i18n="valueKicker">Core Value</p>
-          <h2 data-i18n="valueTitle">让抽象公式变成动态理解</h2>
+          <p class="kicker" data-i18n="aboutKicker">About The Project</p>
+          <h2 data-i18n="aboutTitle">这是一个关于“数学表达方式升级”的项目</h2>
         </header>
         <div class="card-grid four">
           <article class="card reveal">
-            <h3 data-i18n="valueStudentTitle">对学生</h3>
-            <p data-i18n="valueStudentDesc">直观看到傅里叶分解、函数变化和模型响应，显著降低理解门槛。</p>
+            <h3 data-i18n="about1Title">项目愿景</h3>
+            <p data-i18n="about1Desc">让每一个公式都能被看见，让理解从符号记忆转向动态认知。</p>
           </article>
           <article class="card reveal">
-            <h3 data-i18n="valueTeacherTitle">对老师</h3>
-            <p data-i18n="valueTeacherDesc">不依赖复杂软件堆栈，快速制作课堂演示与互动课件。</p>
+            <h3 data-i18n="about2Title">项目价值</h3>
+            <p data-i18n="about2Desc">帮助教学、科研与创作团队以更直观方式呈现复杂概念。</p>
           </article>
           <article class="card reveal">
-            <h3 data-i18n="valueResearchTitle">对科研人员</h3>
-            <p data-i18n="valueResearchDesc">实时调参、即时反馈，用更低成本验证数学和工程模型。</p>
+            <h3 data-i18n="about3Title">项目人群</h3>
+            <p data-i18n="about3Desc">覆盖大学生、教师、科研人员与知识内容创作者。</p>
           </article>
           <article class="card reveal">
-            <h3 data-i18n="valueEngineerTitle">对工程师</h3>
-            <p data-i18n="valueEngineerDesc">用于控制系统、信号处理、AI 与图像算法的表达与验证。</p>
+            <h3 data-i18n="about4Title">项目形态</h3>
+            <p data-i18n="about4Desc">以跨平台创作工具为目标，聚焦“可视化 + 叙事化”表达体验。</p>
           </article>
         </div>
       </div>
@@ -134,122 +129,74 @@
     <section class="section alt" id="features">
       <div class="container">
         <header class="section-head reveal">
-          <p class="kicker" data-i18n="featureKicker">Feature System</p>
-          <h2 data-i18n="featureTitle">一个工作区覆盖完整创作流</h2>
+          <p class="kicker" data-i18n="featureKicker">Project Highlights</p>
+          <h2 data-i18n="featureTitle">围绕表达、理解与传播设计体验</h2>
         </header>
         <div class="card-grid three">
           <article class="feature-card reveal">
-            <h3 data-i18n="f1Title">公式编辑器</h3>
-            <p data-i18n="f1Desc">支持 LaTeX、可视化节点、拖拽组件三种输入路径。</p>
+            <h3 data-i18n="f1Title">更直观的知识呈现</h3>
+            <p data-i18n="f1Desc">把难以讲清的公式关系，转化为可观察的动态画面。</p>
           </article>
           <article class="feature-card reveal">
-            <h3 data-i18n="f2Title">图形系统</h3>
-            <p data-i18n="f2Desc">2D 点线面曲线与 3D 曲面网格粒子，实时渲染目标 60/120 FPS。</p>
+            <h3 data-i18n="f2Title">更顺滑的教学叙事</h3>
+            <p data-i18n="f2Desc">让课堂和内容制作从静态讲述升级为过程化讲述。</p>
           </article>
           <article class="feature-card reveal">
-            <h3 data-i18n="f3Title">动画系统</h3>
-            <p data-i18n="f3Desc">时间轴、关键帧、缓动曲线，参数变化自动生成演示动画。</p>
+            <h3 data-i18n="f3Title">更清晰的模型沟通</h3>
+            <p data-i18n="f3Desc">在团队协作中快速解释模型假设、变化与结果关系。</p>
           </article>
           <article class="feature-card reveal">
-            <h3 data-i18n="f4Title">数据系统</h3>
-            <p data-i18n="f4Desc">CSV / Excel / JSON 导入，数据绑定参数后自动刷新图形。</p>
+            <h3 data-i18n="f4Title">更统一的创作语言</h3>
+            <p data-i18n="f4Desc">连接学生、老师、研究者与创作者，统一表达语境。</p>
           </article>
           <article class="feature-card reveal">
-            <h3 data-i18n="f5Title">模板中心</h3>
-            <p data-i18n="f5Desc">预置数学、物理、统计、AI 模板，快速开始教学与演示。</p>
+            <h3 data-i18n="f5Title">更开放的内容生态</h3>
+            <p data-i18n="f5Desc">未来将支持模板、课程和案例的社区共建与共享。</p>
           </article>
           <article class="feature-card reveal">
-            <h3 data-i18n="f6Title">导出中心</h3>
-            <p data-i18n="f6Desc">支持 PNG/JPEG/SVG、MP4/MOV/GIF、PDF/PPTX 与 Web Viewer。</p>
+            <h3 data-i18n="f6Title">更现代的产品形象</h3>
+            <p data-i18n="f6Desc">不是传统计算器，而是下一代科学表达平台的官网入口。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="architecture">
+    <section class="section" id="plans">
       <div class="container">
         <header class="section-head reveal">
-          <p class="kicker" data-i18n="archKicker">Architecture</p>
-          <h2 data-i18n="archTitle">面向 Apple 生态的技术底座</h2>
-        </header>
-        <div class="stack reveal">
-          <article>
-            <h3>UI</h3>
-            <p>SwiftUI + UIKit</p>
-          </article>
-          <article>
-            <h3>Graphics</h3>
-            <p>Metal + SceneKit + RealityKit</p>
-          </article>
-          <article>
-            <h3>Data</h3>
-            <p>SwiftData + CloudKit + iCloud Drive</p>
-          </article>
-          <article>
-            <h3>Business</h3>
-            <p data-i18n="archBusiness">Sign in with Apple + Apple Subscription</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="mvp">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="kicker" data-i18n="mvpKicker">V1 MVP Scope</p>
-          <h2 data-i18n="mvpTitle">首版必须完成的能力</h2>
-        </header>
-        <div class="check-grid">
-          <p class="check reveal" data-i18n="mvp1">公式编辑器</p>
-          <p class="check reveal" data-i18n="mvp2">LaTeX 解析</p>
-          <p class="check reveal" data-i18n="mvp3">节点编辑</p>
-          <p class="check reveal" data-i18n="mvp4">2D 图形渲染</p>
-          <p class="check reveal" data-i18n="mvp5">动态参数</p>
-          <p class="check reveal" data-i18n="mvp6">时间轴动画</p>
-          <p class="check reveal" data-i18n="mvp7">模板系统</p>
-          <p class="check reveal" data-i18n="mvp8">PNG/PDF 导出</p>
-          <p class="check reveal" data-i18n="mvp9">iCloud 同步</p>
-          <p class="check reveal" data-i18n="mvp10">Apple 订阅</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pricing">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="kicker" data-i18n="pricingKicker">Pricing</p>
-          <h2 data-i18n="pricingTitle">从学习到专业创作的分层方案</h2>
+          <p class="kicker" data-i18n="plansKicker">Plans</p>
+          <h2 data-i18n="plansTitle">版本计划已定义，价格将在正式发布前公布</h2>
         </header>
         <div class="price-grid">
           <article class="price-card reveal">
             <h3>Free</h3>
-            <p class="price">¥0</p>
+            <p class="price" data-i18n="freeState">Coming Soon</p>
             <ul>
-              <li data-i18n="free1">基础公式功能</li>
-              <li data-i18n="free2">基础模板</li>
-              <li data-i18n="free3">PNG 导出</li>
-              <li data-i18n="free4">最多 5 个项目</li>
+              <li data-i18n="free1">适合个人学习与探索</li>
+              <li data-i18n="free2">面向入门创作体验</li>
+              <li data-i18n="free3">开放基础展示能力</li>
+              <li data-i18n="free4">价格待公布</li>
             </ul>
           </article>
           <article class="price-card featured reveal">
-            <span class="badge" data-i18n="plusBadge">Most Popular</span>
+            <span class="badge" data-i18n="plusBadge">Recommended</span>
             <h3>Plus</h3>
-            <p class="price">¥38<span data-i18n="perMonth">/月</span></p>
+            <p class="price" data-i18n="plusState">Coming Soon</p>
             <ul>
-              <li data-i18n="plus1">无限项目</li>
-              <li data-i18n="plus2">高级模板</li>
-              <li data-i18n="plus3">PDF 导出</li>
-              <li data-i18n="plus4">视频导出</li>
+              <li data-i18n="plus1">适合教学与内容制作</li>
+              <li data-i18n="plus2">将提供更完整能力范围</li>
+              <li data-i18n="plus3">优先获得更新通知</li>
+              <li data-i18n="plus4">价格待公布</li>
             </ul>
           </article>
           <article class="price-card reveal">
             <h3>Pro</h3>
-            <p class="price">¥128<span data-i18n="perMonth">/月</span></p>
+            <p class="price" data-i18n="proState">Coming Soon</p>
             <ul>
-              <li data-i18n="pro1">3D 引擎能力</li>
-              <li data-i18n="pro2">模板市场</li>
-              <li data-i18n="pro3">商业授权</li>
-              <li data-i18n="pro4">批量导出</li>
+              <li data-i18n="pro1">适合专业团队与机构</li>
+              <li data-i18n="pro2">支持更广泛的商业场景</li>
+              <li data-i18n="pro3">将开放高级协作能力</li>
+              <li data-i18n="pro4">价格待公布</li>
             </ul>
           </article>
         </div>
@@ -264,16 +211,16 @@
         </header>
         <div class="timeline">
           <article class="milestone reveal">
-            <h3>V1</h3>
-            <p data-i18n="roadmapV1">聚焦公式编辑、2D渲染、动画、模板、导出与同步。</p>
+            <h3 data-i18n="roadmapP1">Phase 01</h3>
+            <p data-i18n="roadmapV1">完成项目官网与品牌信息建设，建立早期用户沟通渠道。</p>
           </article>
           <article class="milestone reveal">
-            <h3>V2</h3>
-            <p data-i18n="roadmapV2">引入 3D 可视化、模板市场、HTML 导出、多人协作。</p>
+            <h3 data-i18n="roadmapP2">Phase 02</h3>
+            <p data-i18n="roadmapV2">开放更多产品演示内容与案例，形成清晰的产品价值认知。</p>
           </article>
           <article class="milestone reveal">
-            <h3>V3</h3>
-            <p data-i18n="roadmapV3">开放 AI 助手、自动建模、公式解释、动画和课程生成。</p>
+            <h3 data-i18n="roadmapP3">Phase 03</h3>
+            <p data-i18n="roadmapV3">进入公开发布阶段，持续迭代生态内容与用户增长体系。</p>
           </article>
         </div>
       </div>
@@ -287,20 +234,20 @@
         </header>
         <div class="faq-list">
           <details class="faq-item reveal">
-            <summary data-i18n="faqQ1">Equation Studio 是计算器吗？</summary>
-            <p data-i18n="faqA1">不是。它是可视化创作平台，重点在公式表达、动画与交互演示。</p>
+            <summary data-i18n="faqQ1">这个官网目前是什么定位？</summary>
+            <p data-i18n="faqA1">它是 Equation Studio 的项目介绍官网，用于展示愿景、价值和发展方向。</p>
           </details>
           <details class="faq-item reveal">
-            <summary data-i18n="faqQ2">V1 会上线 AI 吗？</summary>
-            <p data-i18n="faqA2">V1 不上线 AI，优先保证核心创作体验；V2+ 支持自定义模型 API Key。</p>
+            <summary data-i18n="faqQ2">为什么不展示具体技术细节？</summary>
+            <p data-i18n="faqA2">当前页面聚焦对外介绍，技术实现会在后续文档与发布说明中逐步公开。</p>
           </details>
           <details class="faq-item reveal">
-            <summary data-i18n="faqQ3">是否支持跨设备同步？</summary>
-            <p data-i18n="faqA3">支持，基于 iCloud Drive 与 CloudKit 实现 Apple 生态同步。</p>
+            <summary data-i18n="faqQ3">为什么价格显示为 Coming Soon？</summary>
+            <p data-i18n="faqA3">定价策略仍在评估阶段，官网会在正式发布前统一公布。</p>
           </details>
           <details class="faq-item reveal">
-            <summary data-i18n="faqQ4">目标用户是谁？</summary>
-            <p data-i18n="faqA4">大学生、教师、科研人员和内容创作者是首批核心用户群体。</p>
+            <summary data-i18n="faqQ4">我可以提前关注项目动态吗？</summary>
+            <p data-i18n="faqA4">可以。你可以通过文档、博客和更新日志持续关注项目进展。</p>
           </details>
         </div>
       </div>
