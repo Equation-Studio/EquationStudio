@@ -79,14 +79,26 @@ python -m http.server 8080
 4. Branch 选择 `main`，Folder 选择 `/ (root)`
 5. 保存并等待部署完成
 
-## 上线后必须替换的占位 URL
+## 当前线上地址
 
-将以下文件中的 `https://example.github.io/EquationStudio/` 替换为真实地址：
+已配置为组织站点地址：
 
-- `index.html`（canonical、og:url）
-- `robots.txt`（Sitemap）
-- `sitemap.xml`（loc）
+- 首页: https://equation-studio.github.io/EquationStudio/
+- 文档: https://equation-studio.github.io/EquationStudio/pages/docs/index.html
+- 隐私政策: https://equation-studio.github.io/EquationStudio/pages/legal/privacy-policy.html
+- 服务条款: https://equation-studio.github.io/EquationStudio/pages/legal/terms-of-service.html
+- 博客: https://equation-studio.github.io/EquationStudio/pages/blog/index.html
+- 更新日志: https://equation-studio.github.io/EquationStudio/pages/changelog/index.html
 
-目标格式：
+## URL 维护规则
 
-`https://<your-username>.github.io/<repo-name>/`
+后续如果仓库名或域名变化，只改一个地方：
+
+1. 更新 `scripts/sitemap.config.json` 里的 `baseUrl`
+2. 重新生成 `sitemap.xml`
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\generate-sitemap.ps1
+```
+
+首页中的 canonical 和 og:url 也需要同步为新地址。
