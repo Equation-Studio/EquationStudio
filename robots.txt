@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.github.io/EquationStudio/sitemap.xml
+Sitemap: https://equation-studio.github.io/EquationStudio/sitemap.xml

@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://example.github.io/EquationStudio/",
+  "baseUrl": "https://equation-studio.github.io/EquationStudio/",
   "pages": [
     { "path": "", "changefreq": "weekly", "priority": "1.0" },
     { "path": "pages/legal/privacy-policy.html", "changefreq": "monthly", "priority": "0.6" },
