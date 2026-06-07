@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://example.github.io/EquationStudio/",
+  "pages": [
+    { "path": "", "changefreq": "weekly", "priority": "1.0" },
+    { "path": "pages/legal/privacy-policy.html", "changefreq": "monthly", "priority": "0.6" },
+    { "path": "pages/legal/terms-of-service.html", "changefreq": "monthly", "priority": "0.6" },
+    { "path": "pages/docs/index.html", "changefreq": "weekly", "priority": "0.7" },
+    { "path": "pages/blog/index.html", "changefreq": "weekly", "priority": "0.7" },
+    { "path": "pages/changelog/index.html", "changefreq": "weekly", "priority": "0.8" }
+  ]
+}
